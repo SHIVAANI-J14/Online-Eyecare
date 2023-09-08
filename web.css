@@ -1,0 +1,139 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(black-wallpaper-to-set-as-background-25.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    font-family: sans-serif;
+}
+.menu-bar
+{
+    background:black;
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    font-weight: bold;
+}
+.menu-bar ul li
+{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+.active,.menu-bar ul li:hover
+{
+    background: rgb(255, 127, 127);
+    border-radius: 3px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(120, 69, 102);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #0d0404;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: #b2ff00;
+}
+.mail form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+  }
+  .mail form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 100px 14px 15px;
+    border: 2px solid rgb(255, 127, 127);
+    border-radius: 40px;
+  }
+  .mail form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border:none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color:  rgb(255, 127, 127);
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px #000,0px 0px 15px #858585;
+    top: 6px;
+    right: 6 px;
+  }
+  .mail li a{
+    color: antiquewhite;
+    font-size: large;
+  }
+  .start{
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    padding: 20px;
+  }
+  h3{
+    color: antiquewhite;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+    position: scroll;
+  }
+  h2{
+    color:antiquewhite;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  h1{
+    color: rgb(255, 127, 127);
+    font-size: medium;
+  }
+  span{
+    color:rgb(255, 127, 127);
+  }
+  .logo{
+    color:whitesmoke;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  

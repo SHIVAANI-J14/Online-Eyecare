@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="logipage.css">
+    
+    <style>
+        body {
+            background-color: antiquewhite;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function validateform() {
+            var user = document.myform.user.value;
+            var email = document.myform.email.value;
+            var pwd = document.myform.pass.value;
+            var pwd1 = document.myform.password1.value;
+            var ph = document.myform.phone.value;
+            var gender = document.myform.gen.value;
+            var radio = document.myform.radio.value;
+            let checkbox=document.getElementById("check");
+
+            if (user == null || user == "") {
+                alert("PLEASE ENTER USERNAME");
+                return false; 
+            }
+            if (user.length != "") {
+                var regex = /(?=.{6,})/;
+                if (regex.test(user) === false) {
+                    alert("Must contain more than 5 characters");
+                    return false;
+                }
+            }
+            if (email == null || email == "") {
+                alert("Kindly enter your Email!!");
+                return false;
+            }
+            if (email.length != "") {
+                var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if (regex.test(email) === false) {
+                    alert("Enter a valid Email!!");
+                    return false;
+                }
+            }
+           if (pwd == null || pwd == "") {
+                alert("Please enter Passworrd!!");
+                return false;
+            }
+            if (pwd.length != "") {
+                var regex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+                if (regex.test(pwd) === false) {
+                    alert("Enter a valid password!!");
+                    return false;
+                }
+            }
+            if (pwd != pwd1) {
+                alert("password incorrect .Try again");
+                return false;
+            }
+            if (ph == null || ph == "") {
+                alert("enter mobile number");
+                return false;
+            }
+
+            if (ph.length != '') {
+                var regex = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/;
+
+                if (regex.test(ph) === false) {
+                    alert("Enter Valid Mobile no.!!!\nMobile number should contain only numbers\nFormat : 1234567890");
+                    return false;
+                }
+            }
+            if (gender == null || gender == "") {
+                alert("Select your gender");
+                return false;
+            }
+            if (radio == null || radio == "") {
+                alert("add to whishlist or not!!");
+                return false;
+            }
+            if (check.checked){
+            }
+            else{
+                alert("Agree to terms and conditions!!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="order confirm.html" method="post" name="myform" onsubmit="return validateform()">
+        <label>
+            <h3>ENTER YOUR CREDENTIALS TO LOGIN AND CONTINUE</h3>
+        </label><br>
+        <label>USERNAME:</label><br>
+        <input type="text" name="user" id="username"><br><br>
+        <label>EMAIL:</label><br>
+        <input type="text" name="email" id="email"><br><br>
+        <label>PASSWORD:</label><br>
+        <input type="password" id="password" name="pass"><br><br>
+        <label>CONFORM PASSWORD:</label><br>
+        <input type="password" id="password" name="password1"><br><br>
+        <label>MOBILE NUMBER:</label><br>
+        <input type="tel" name="phone"><br><br>
+        <label for="gender">GENDER</label>
+        <select name="gen" id="gender">
+            <option value="" selected>SELECT</option>
+            <option value="Male">MALE</option>
+            <option value="Female">FEMALE</option>
+
+        </select><br><br>
+        <label for="">Are You 18+  :</label><br>
+        <input type="radio" id="radio1" name="radio1" value="Yes">Yes<br>
+        <input type="radio" id="radio2" name="radio2" value="No">No<br><br>
+
+        <label>
+            Address: </label><br>
+        <textarea ></textarea><br>
+        <input id ="check" type="checkbox" name="cd" value="checked"><label><a href="terms.html">I agree to terms and conditions</a></label>
+        <input type="submit" required formaction="http://localhost:3000/login">
+
+    </form>
+</body>
+</html>
+ 
